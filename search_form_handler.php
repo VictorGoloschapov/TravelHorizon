@@ -35,7 +35,7 @@ if (!empty($filteredFlights)) {
 <pre>
     <p class="fs-4 text-decoration-underline text-danger">Stack trace</p>
     <?php
-    echo "flights examples:";
+    echo "flights examples: <br>";
 
     foreach ($flights as $flight) {
         echo "Flight from " . $flight['from'] . " to " . $flight['to'] . " on " . $flight['date'] . " for $" . $flight['price'] . " by " . $flight['airline'] . "<br>";
