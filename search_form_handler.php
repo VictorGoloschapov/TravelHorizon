@@ -40,8 +40,8 @@ if (!empty($filteredFlights)) {
     foreach ($flights as $flight) {
         echo "Flight from " . $flight['from'] . " to " . $flight['to'] . " on " . $flight['date'] . " for $" . $flight['price'] . " by " . $flight['airline'] . "<br>";
     }
-
-    echo "result:";
+    echo "<br>";
+    echo "Submitted form result:<br>";
 
     echo "Departure airport:" . $departure . "<br>";
     echo "Departure airport:" . $arrival . "<br>";
