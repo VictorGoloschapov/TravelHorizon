@@ -10,10 +10,14 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $dateOfFlight = $_GET["dateOfFlight"] ?? "";
 }
 
-$filteredFlights = array_filter($flights, function($flight) use ($departure, $arrival, $dateOfFlight) {
-    return (stripos($flight['from'], $departure) !== false || stripos($flight['from'], $arrival) !== false) || 
-           (stripos($flight['to'], $departure) !== false || stripos($flight['to'], $arrival) !== false) ||
-           (stripos($flight['date'], 'LHR') == $dateOfFlight);
+// Фильтруем рейсы, где маршрут "JFK" → "LHR"
+$filteredFlights = array_filter($flights, function($flight) use ($departure, $arrival, $dateOfFlight){
+    return $flight['from'] == $departure && $flight['to'] == $arrival && $flight['date'] == $dateOfFlight;
+});
+
+// Сортируем отфильтрованные рейсы по дате
+usort($filteredFlights, function($a, $b) {
+    return strtotime($a['date']) - strtotime($b['date']);
 });
 
 if (!empty($filteredFlights)) {
