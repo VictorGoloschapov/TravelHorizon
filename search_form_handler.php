@@ -1,9 +1,5 @@
 <?php
 
-// var_dump($_GET);
-
-// var_dump($_SERVER);
-
 if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $departure = $_GET["departure"] ?? "";
     $arrival = $_GET["arrival"] ?? "";
@@ -25,6 +21,8 @@ $auth_data = array(
     'client_secret' => $_ENV["API_SECRET"],
     'grant_type'    => 'client_credentials'
 );
+
+
 $headers = array('Content-Type' => 'application/x-www-form-urlencoded');
 
 $requests_response = Requests::post($url, $headers, $auth_data);

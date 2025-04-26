@@ -1,15 +1,21 @@
 <?php
-/**научится работать с API 
- * изучить cUrl
- * добавить API ключ
-*/
 
 function searchAmadeusFlights($departureCity, $arrivalCity, $departureDate) {
-    $flights_offers = array();
-    
-    
+    $flightsOffers = array();
 
-    return $flights_offers;
+    return $flightsOffers;
+}
+
+function searchAmadeusHotelBookings() {
+    $hotelBookingOffers = array();
+
+    return $hotelBookingOffers;
+}
+
+function searchAmadeusCarRental() {
+    $carRentalOffers = array();
+
+    return $carRentalOffers;
 }
 
 ?>
