@@ -14,8 +14,22 @@ $flights = [
     ["id" => 10, "from" => "BOS", "to" => "SYD", "date" => "2025-06-10", "price" => 950, "airline" => "Qantas", "link" => "https://example.com/book/10"]
 ];
 
-$devVersion = "1.0.";
-$devDescription = "Using imitation of reply from API, to get developer API";
+//for test curl purposes
+
+// $json_arr = json_encode($flights);
+// var_dump(json_decode($json_arr));
+$url = "http://localhost/travel_search_engine_project/TravelHorizon/curl_test.php";
+
+// require __DIR__ . '/vendor/autoload.php';
+// use Dotenv\Dotenv;
+// $dotenv = Dotenv::createImmutable(__DIR__);
+// $dotenv->load();
+
+// var_dump($_ENV);
+
+
+$devVersion = "1.0.1";
+$devDescription = "New file structure. Using imitation of reply from API, to get developer API";
 
 // var_dump($flights);
 ?>
