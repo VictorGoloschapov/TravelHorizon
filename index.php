@@ -1,16 +1,19 @@
 <?php
-//PROJECT DOCUMENTATION
+/**PROJECT DOCUMENTATION
+ * 
+*/
 
 /**todo list for refactor
- * url, auth data move to config.php from search_form_handler.php
- * html of search result move to includes as html template
- * html template include in search_form_handler
- * in function.php create search function for flight, hotel, car rental offers
+ * in function.php create search function for flight, hotel, car rental offers - in process
+ * seacrh form - need to check for empty fields, SQL injection prevent
+ * seacrh results - need to check for empty array fields in flights array
  * create new repo for UI components and html template development
  */
 
-/** to do list for new features and imporvements 
- * 
+/** to do list for new features and improvements 
+ * add database
+ * add sorting to search results
+ * replan project to MVC architecture
 */
 
 /*--------------------------------------------------*/

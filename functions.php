@@ -1,5 +1,4 @@
 <?php
-
 function searchAmadeusFlights($departureCity, $arrivalCity, $departureDate) {
     $flightsOffers = array();
 
@@ -17,5 +16,4 @@ function searchAmadeusCarRental() {
 
     return $carRentalOffers;
 }
-
 ?>
