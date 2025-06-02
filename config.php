@@ -6,6 +6,6 @@ use Dotenv\Dotenv;
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->load();
 
-$devVersion = "1.0.2";
+$devVersion = "1.1.0";
 $devDescription = "New file structure. Implemented Amadeus Self Service API for development purposes";
 ?>
