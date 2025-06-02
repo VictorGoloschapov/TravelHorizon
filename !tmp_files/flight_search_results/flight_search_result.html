@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Результаты поиска рейсов</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #f8f9fa;
+    }
+    .flight-card {
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: 0.2s ease-in-out;
+    }
+    .flight-card:hover {
+      transform: scale(1.01);
+    }
+    .price-tag {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #0d6efd;
+    }
+    .sort-section {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container py-4">
+
+  <h2 class="mb-4">Результаты поиска рейсов</h2>
+
+  <!-- Сортировка -->
+  <div class="row sort-section">
+    <div class="col-md-4">
+      <select class="form-select" id="sortSelect">
+        <option value="price">Сначала дешёвые</option>
+        <option value="duration">По времени в пути</option>
+        <option value="departure">По времени вылета</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Результаты рейсов -->
+  <div class="row" id="results">
+
+    <!-- Карточка рейса -->
+    <div class="col-md-12 mb-3">
+      <div class="p-3 bg-white flight-card d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="mb-1">Riga (RIX) → London (LHR)</h5>
+          <div class="text-muted">07:15 — 08:50 (2ч 35м) • AirBaltic</div>
+        </div>
+        <div class="text-end">
+          <div class="price-tag">€85</div>
+          <button class="btn btn-primary btn-sm mt-2">Купить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 mb-3">
+      <div class="p-3 bg-white flight-card d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="mb-1">Riga (RIX) → London (LGW)</h5>
+          <div class="text-muted">09:30 — 11:15 (2ч 45м) • Ryanair</div>
+        </div>
+        <div class="text-end">
+          <div class="price-tag">€69</div>
+          <button class="btn btn-primary btn-sm mt-2">Купить</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-12 mb-3">
+      <div class="p-3 bg-white flight-card d-flex justify-content-between align-items-center">
+        <div>
+          <h5 class="mb-1">Riga (RIX) → London (STN)</h5>
+          <div class="text-muted">12:00 — 13:40 (2ч 40м) • Wizz Air</div>
+        </div>
+        <div class="text-end">
+          <div class="price-tag">€55</div>
+          <button class="btn btn-primary btn-sm mt-2">Купить</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Скрипт сортировки (заглушка для динамики) -->
+<script>
+  document.getElementById('sortSelect').addEventListener('change', function() {
+    alert('Здесь будет сортировка по: ' + this.value);
+    // Здесь можно реализовать сортировку через Ajax или JS
+  });
+</script>
+
+</body>
+</html>
